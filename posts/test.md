@@ -1,6 +1,6 @@
 ---
 title: 'Test Post'
-subtitle: 'We doing some testing 😈'
+subtitle: 'Testo presto!'
 date: 'June 24 2021'
 cover_image: '/images/posts/img1.jpg'
 ---
