@@ -24,7 +24,6 @@ const PostPage = (props: any) => {
 
     return (
         <div>
-            <h1>This is a post! {slug} </h1>
             <article className="prose lg:prose-xl prose-pre:bg-neutral-700">
                 <Markdown>{markdownContent}</Markdown>
             </article>
