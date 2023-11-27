@@ -1,7 +1,7 @@
 ---
-title: 'Lorem Markdownum'
-subtitle: '📃'
-date: 'June 24 2021'
+title: "Lorem Markdownum"
+subtitle: "📃"
+date: "June 24 2021"
 ---
 
 # Cavas fugiunt dies
@@ -44,9 +44,9 @@ Contra tu isto, semper! Dixit unda postibus, atque parilique aeolis. Inter
 Cadmus mediis domum. Hoc flere Iovis, papyriferi victrix iaculum gradu.
 
 > Magnoque animique rubetis, telluris, rigebant haec! Non numquam matris, vera,
-> a *quoque Talibus via*! Hanc iam: nymphis spargere instabiles eo matrem in
+> a _quoque Talibus via_! Hanc iam: nymphis spargere instabiles eo matrem in
 > haec et admittitur? [Coniunx dulcique his](http://www.sine-quem.org/)!
 
-Inposuit et solvit animusque *traxere* Caeni mortalibus herbas futurum faciunt
+Inposuit et solvit animusque _traxere_ Caeni mortalibus herbas futurum faciunt
 cui erat. Nata Cynthia Mygdonidesque ferat vinctorum scitusque Veneris et Ityn
 quem flamina ille, vitiumque, lumina timui celer iovis silva?
