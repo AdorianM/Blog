@@ -3,7 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Link from "next/link";
 import ScrollProgressBar from "@/components/ScrollProgressBar";
-
+import Header from "@/components/Header";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -47,8 +47,8 @@ export default function RootLayout({
     <html lang="en">
       <body className={`bg-neutral-100 ${inter.className}`}>
         <div>
-          {header}
-          <div className="mx-auto max-w-2xl px-6 py-6">{children}</div>
+          <Header />
+          {children}
           {footer}
         </div>
       </body>
