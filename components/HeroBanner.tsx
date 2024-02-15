@@ -1,8 +1,9 @@
 const HeroBanner = (props: any) => {
+
     return (
         <div 
             className="h-96 flex items-center justify-center bg-cover"
-            style={{backgroundImage: `url(${props.image})`}}
+            style={{backgroundImage: `url(${props.image})`, transition: `background-image 0.8s ease-in-out`}}
         >
             <div className="text-center">
                 <h1 className="text-4xl text-yellow-400 font-bold">{props.title}</h1>
