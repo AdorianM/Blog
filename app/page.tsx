@@ -2,6 +2,7 @@ import HeroBannerCarousel from "@/components/HeroBannerCarousel";
 import { HeroBannerType } from "@/types/types";
 import GamesList from "@/components/GamesList";
 import Container from "@/components/Container";
+import News from "@/components/News";
 
 const HomePage = () => {
   // const postsMetadata = getPostsMetadata();
@@ -40,6 +41,7 @@ const HomePage = () => {
       <HeroBannerCarousel heroData={heroBannerData} />
       <Container>
         <GamesList />
+        <News />
       </Container>
     </div>
   );

@@ -1,9 +1,8 @@
 import path from "path";
-import { ContentMetadata } from "../types/types";
 import fs from "fs";
 import matter from "gray-matter";
 
-const getContentMetadata = (folder: string): ContentMetadata[] => {
+const getMetadata = <T>(folder: string): T[] => {
   const files = fs.readdirSync(folder);
   const markdownContent = files.filter((file) => file.endsWith(".md"));
 
@@ -11,14 +10,12 @@ const getContentMetadata = (folder: string): ContentMetadata[] => {
     const content = fs.readFileSync(path.join(folder, fileName), "utf8");
     const matterResult = matter(content);
     return {
-      title: matterResult.data.title,
-      date: matterResult.data.date,
-      subtitle: matterResult.data.subtitle,
+      ...matterResult.data,
       slug: fileName.replace(".md", ""),
-    };
+    } as T;
   });
 
   return postsFrontMatter;
 };
 
-export default getContentMetadata;
+export default getMetadata;

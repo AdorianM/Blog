@@ -1,8 +1,9 @@
+import { ContentMetadata } from "@/types/types";
 import GamePreview from "./GamePreview";
-import getContentMetadata from "./getContentMetadata";
+import getMetadata from "./getMetadata";
 
 const GamesList = () => {
-    const gamesMetadata = getContentMetadata("content/games/")
+    const gamesMetadata = getMetadata<ContentMetadata>("content/games/")
 
     return (
         <div>
