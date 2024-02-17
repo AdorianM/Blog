@@ -2,11 +2,9 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 const Header = () => {
-    const headerClass =`flex justify-between items-center max-w-screen-xl py-4 mx-auto`;
-
     return (
-    <header className="bg-slate-600">
-        <div className={headerClass}>
+    <header className="bg-camel-yellow-dark-strong">
+        <div className="header">
             <Link href="/">
                 <Image
                     src="https://placekitten.com/50/50"
@@ -16,7 +14,7 @@ const Header = () => {
                 />
             </Link>
             <div>
-                <ul className="flex space-x-8">
+                <ul>
                     <li>
                         <Link href="/games">Games</Link>
                     </li>

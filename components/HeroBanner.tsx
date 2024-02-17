@@ -2,12 +2,12 @@ const HeroBanner = (props: any) => {
 
     return (
         <div 
-            className="h-96 flex items-center justify-center bg-cover"
-            style={{backgroundImage: `url(${props.image})`, transition: `background-image 0.8s ease-in-out`}}
+            className="hero"
+            style={{backgroundImage: `url(${props.image})`}}
         >
             <div className="text-center">
-                <h1 className="text-4xl text-yellow-400 font-bold">{props.title}</h1>
-                <button className="bg-yellow-400 text-slate-600 px-4 py-2 rounded-md mt-4">{props.buttonText}</button>
+                <h1 className="font-bold">{props.title}</h1>
+                <button className="button-yellow">{props.buttonText}</button>
             </div>
         </div>
     )
