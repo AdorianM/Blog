@@ -7,10 +7,10 @@ const GamesList = () => {
 
     return (
         <div>
-            <h2 className="text-4xl text-center py-10">
+            <h2 className="text-center py-10">
                 Games by Future Camel
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="dynamic-grid gap-8">
                 {gamesMetadata.map((game) => (
                     <GamePreview key={game.slug} {...game} />
                 ))}

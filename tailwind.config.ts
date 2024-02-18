@@ -38,7 +38,6 @@ const config: Config = {
           'light': '#54CAF0',
           'dark': '#5F6C70'
         }
-
       }
     },
   },

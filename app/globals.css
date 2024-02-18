@@ -5,24 +5,34 @@
 @layer base {
   h1 {
     @apply text-6xl;
-  },
+    @apply font-lilita;
+  }
   h2 {
-    @apply text-2xl;
-  },
+    @apply text-4xl;
+    @apply font-lilita;
+  }
   h3 {
-    @apply text-xl;
-  },
+    @apply text-2xl;
+    @apply font-lilita;
+  }
   p {
     @apply text-base;
+  }
+
+  footer {
+    @apply bg-camel-yellow-dark-strong;
+  }
+
+  .container a {
+    @apply text-camel-indigo-light;
   }
 }
 
 @layer components {
   .header {
     @apply flex justify-between items-center;
-    @apply max-w-screen-xl mx-auto;
+    @apply max-w-screen-xl mx-auto py-4;
     @apply text-2xl text-camel-yellow-light;
-    @apply py-4;
     ul {
       @apply flex space-x-12;
     }
@@ -31,13 +41,16 @@
     }
   }
 
+  .footer {
+    @apply max-w-screen-xl mx-auto;
+  }
+
   .hero {
     @apply flex items-center justify-center;
     @apply h-96 bg-cover;
     @apply transition-all duration-500 ease-in-out;
     @apply text-camel-yellow-light;
     h1 {
-      @apply font-lilita;
       text-shadow: 0px 2px 10px #332C1F;
     }
   }
@@ -48,6 +61,7 @@
     @apply hover:bg-camel-yellow-dark;
     @apply hover:text-camel-yellow-light;
     @apply px-4 py-2 rounded-md mt-4;
+    @apply font-bold;
   }
 
   .carousel-dot {
@@ -55,6 +69,66 @@
     @apply cursor-pointer;
   }
 
+  .dynamic-grid {
+    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4;
+  }
+
+  .news-preview {
+    @apply flex justify-between;
+    @apply h-80 space-x-10;
+
+    img {
+      @apply cursor-pointer object-cover rounded-lg;
+      @apply transform transition-all duration-500 ease-in-out;
+      @apply hover:scale-110 hover:drop-shadow-lg;
+
+      &:hover {
+        filter: drop-shadow(1px 5px 10px rgba(70, 64, 55, 0.5));
+      }
+    }
+  }
+
+  .card {
+    @apply relative overflow-hidden;
+    @apply transform transition-transform duration-500 ease-in-out;
+    @apply hover:scale-110 hover:rotate-2;
+
+    &:after {
+      content: "";
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: linear-gradient(60deg, rgba(239,185,34,0.2) 25%, transparent 50%, transparent 75%, rgba(239,185,34,0.2) 100%);
+      pointer-events: none;
+      z-index: 100;
+      opacity: 0;
+      transition: opacity 0.5s;
+    }
+  
+    &:hover:after {
+      opacity: 1;
+    }
+  }
+
+  .tag {
+    @apply font-bold bg-camel-yellow-light text-camel-yellow-dark-strong rounded-lg px-2 py-1;
+  }
+
+  .unimportant {
+    @apply text-sm text-camel-yellow-dark-soft;
+  }
+
+  .footer-nav {
+    @apply flex py-4 space-x-8;
+    @apply border-b-2 border-camel-yellow-dark-soft;
+    @apply text-camel-yellow-light-soft;
+  }
+
+  .footer-info {
+    @apply flex py-4 justify-between;
+  }
 }
 
 body {

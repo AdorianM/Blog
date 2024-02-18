@@ -27,7 +27,7 @@ const HeroBannerCarousel = ({heroData} : { heroData: HeroBannerType[] }) => {
         // On mount change slide every 3 seconds. On unmount clear that interval.
         interval.current = setInterval(nextSlide, 5000);
         return () => clearInterval(interval.current!);
-    }, [])
+    })
 
     return (
         <div className="relative h-96">
