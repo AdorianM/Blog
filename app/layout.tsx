@@ -15,8 +15,19 @@ const lilitaOne = Lilita_One({
 })
 
 export const metadata: Metadata = {
-  title: "The unpretentious blog",
-  description: "Just overthink it!",
+  title: "Future Camel",
+  applicationName: "FutureCamel",
+  authors: [
+    { name: "OldDew", url: "https://www.youtube.com/channel/UC4Tv4nxn8yZjyZKMvs_NvAg"},
+    { name: "Future Camel" }
+  ],
+  keywords: [
+    "Future Camel", "Vampire Solitaire", "Game Development", "Indie Games", "Game Studio", "Game Development Studio"
+  ],
+  robots: "index, follow",
+  category: "Game Development",
+  publisher: "Future Camel",
+  description: "Indie game development studio. We make games, talk about the game development process and share our experiences.",
 };
 
 export default function RootLayout({

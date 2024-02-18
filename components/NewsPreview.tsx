@@ -31,17 +31,17 @@ const NewsPreview = ({metadata, mirror} : { metadata: NewsMetadata, mirror: bool
                     />
                 </Link>
             </div>
-            <div className="flex flex-col justify-between w-1/2">
+            <div className="flex flex-col justify-between w-1/2 h-28 md:h-60 xl:h-80">
                 <div>
                     <h3 className="mb-2">{title}</h3>
-                    <div className="flex flex-wrap mb-2 space-x-2">
+                    <div className="flex flex-wrap mb-4 lg:mb-8 space-x-2">
                         {tags?.map((tag) => (
                             <span key={tag} className="tag">
                                 {tag}
                             </span>
                         ))}
                     </div>
-                    <p className="mb-2">{description}</p>
+                    <p className="mb-2 overflow-hidden max-h-24">{description}</p>
                 </div>
 
                 <div className="flex justify-between">
