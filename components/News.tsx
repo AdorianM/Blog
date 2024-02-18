@@ -7,8 +7,8 @@ const News = () => {
 
     return (
         <div className="mx-40">
-            <h2 className="text-4xl text-left py-10">News</h2>
-            <div>
+            <h2 className="text-left py-10">News</h2>
+            <div className="flex flex-col space-y-16">
                 {newsMetadata.map((post: NewsMetadata, index) => {
                     return (
                         <NewsPreview metadata={post} mirror={index % 2 ? true : false} key={post.slug} />

@@ -5,7 +5,7 @@ const GamePreview = (props: any) => {
     return (
         <div
             key={props.slug}
-            className="border border-neutral-200 rounded-md shadow-md bg-neutral-700"
+            className="card"
         >
             <Link href={`/games/${props.slug}`}>
                 <Image
