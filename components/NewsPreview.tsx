@@ -8,40 +8,42 @@ const NewsPreview = ({metadata, mirror} : { metadata: NewsMetadata, mirror: bool
     const { title, date, description, tags, slug } = metadata;
 
     const variationClasses = clsx({
-        'flex-row-reverse': mirror,
-        'flex-row': !mirror
+        'md:flex-row-reverse': mirror,
+        'md:flex-row': !mirror
     }, {
-        'space-x-reverse': mirror,
+        'md:space-x-reverse': mirror,
     })
 
     const imageVariationClasses = clsx({
-        'hover:-rotate-1': mirror,
-        'hover:rotate-1': !mirror
+        'md:hover:-rotate-1': mirror,
+        'md:hover:rotate-1': !mirror
     })
 
     return (
         <div className={`news-preview ${variationClasses}`}>
-            <div className="relative w-1/2">
+            <div className="relative md:w-1/2">
                 <Link href={`/news/${slug}`}>
                     <Image
                         className={imageVariationClasses}
                         src="https://picsum.photos/600/400"
                         alt={"image alt"}
-                        fill
+                        objectFit="cover"
+                        height={150}
+                        width={300}
                     />
                 </Link>
             </div>
-            <div className="flex flex-col justify-between w-1/2">
+            <div className="flex flex-col justify-between md:w-1/2 h-28 md:h-60 xl:h-80">
                 <div>
                     <h3 className="mb-2">{title}</h3>
-                    <div className="flex flex-wrap mb-2 space-x-2">
+                    <div className="flex flex-wrap mb-4 lg:mb-8 space-x-2">
                         {tags?.map((tag) => (
                             <span key={tag} className="tag">
                                 {tag}
                             </span>
                         ))}
                     </div>
-                    <p className="mb-2">{description}</p>
+                    <p className="description">{description}</p>
                 </div>
 
                 <div className="flex justify-between">
