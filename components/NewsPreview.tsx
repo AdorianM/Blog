@@ -9,14 +9,14 @@ const NewsPreview = ({metadata, mirror} : { metadata: NewsMetadata, mirror: bool
 
     const variationClasses = clsx({
         'md:flex-row-reverse': mirror,
-        'flex-col md:flex-row': !mirror
+        'md:flex-row': !mirror
     }, {
         'md:space-x-reverse': mirror,
     })
 
     const imageVariationClasses = clsx({
-        'hover:-rotate-1': mirror,
-        'hover:rotate-1': !mirror
+        'md:hover:-rotate-1': mirror,
+        'md:hover:rotate-1': !mirror
     })
 
     return (
@@ -27,7 +27,9 @@ const NewsPreview = ({metadata, mirror} : { metadata: NewsMetadata, mirror: bool
                         className={imageVariationClasses}
                         src="https://picsum.photos/600/400"
                         alt={"image alt"}
-                        fill
+                        objectFit="cover"
+                        height={150}
+                        width={300}
                     />
                 </Link>
             </div>
