@@ -8,10 +8,10 @@ const NewsPreview = ({metadata, mirror} : { metadata: NewsMetadata, mirror: bool
     const { title, date, description, tags, slug } = metadata;
 
     const variationClasses = clsx({
-        'flex-row-reverse': mirror,
-        'flex-row': !mirror
+        'md:flex-row-reverse': mirror,
+        'flex-col md:flex-row': !mirror
     }, {
-        'space-x-reverse': mirror,
+        'md:space-x-reverse': mirror,
     })
 
     const imageVariationClasses = clsx({
@@ -21,7 +21,7 @@ const NewsPreview = ({metadata, mirror} : { metadata: NewsMetadata, mirror: bool
 
     return (
         <div className={`news-preview ${variationClasses}`}>
-            <div className="relative w-1/2">
+            <div className="relative md:w-1/2">
                 <Link href={`/news/${slug}`}>
                     <Image
                         className={imageVariationClasses}
@@ -31,7 +31,7 @@ const NewsPreview = ({metadata, mirror} : { metadata: NewsMetadata, mirror: bool
                     />
                 </Link>
             </div>
-            <div className="flex flex-col justify-between w-1/2 h-28 md:h-60 xl:h-80">
+            <div className="flex flex-col justify-between md:w-1/2 h-28 md:h-60 xl:h-80">
                 <div>
                     <h3 className="mb-2">{title}</h3>
                     <div className="flex flex-wrap mb-4 lg:mb-8 space-x-2">
