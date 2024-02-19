@@ -1,4 +1,5 @@
 import { ContentMetadata, NewsMetadata } from "@/types/types"
+import ContentLinkList from "@/components/ContentLinkList"
 import getMetadata from "./getMetadata"
 import Link from "next/link"
 
@@ -10,37 +11,14 @@ const Footer = () => {
         <footer>
             <div className="footer">
                 <div className="footer-nav">
-                    <ul>
-                        <li className="header">
-                            Games
-                        </li>
-                        {gamesMetadata.map((game) => (
-                            <li key={game.slug}>
-                                <Link href={`/games/${game.slug}`}>{game.title}</Link>
-                            </li>
-                        ))}
-                    </ul>
-                    <ul>
-                        <li className="header">
-                            News
-                        </li>
-                        {newsMetadata.map((post) => (
-                            <li key={post.slug}>
-                                <Link href={`/news/${post.slug}`}>{post.title}</Link>
-                            </li>
-                        ))}
-                    </ul>
-                    <ul>
-                        <li className="header">
-                            About Us
-                        </li>
-                        <li>
-                            <Link href="/about">About</Link>
-                        </li>
-                        <li>
-                            <Link href="/contact">Contact</Link>
-                        </li>
-                    </ul>
+                    <ContentLinkList header="Games" content={gamesMetadata} />
+                    <ContentLinkList header="News" content={newsMetadata} />
+                    <ContentLinkList header="About Us" content={
+                        [
+                            { title: "About", slug: "about" },
+                            { title: "Contact", slug: "contact" }
+                        ]
+                    } />
                 </div>
                 <div className="footer-info">
                     <p className="unimportant">© 2024 Future Camel</p>

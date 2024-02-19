@@ -45,7 +45,8 @@
   }
 
   .footer {
-    @apply max-w-screen-xl mx-auto;
+    @apply max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl mx-auto;
+    @apply p-2 md:p-4
   }
 
   .hero {
@@ -90,6 +91,8 @@
       @apply cursor-pointer object-cover rounded-lg;
       @apply transform transition-all duration-500 ease-in-out;
       @apply md:hover:scale-105 md:hover:drop-shadow-lg;
+      @apply mb-4 md:mb-0;
+      
 
       &:hover {
         filter: drop-shadow(1px 5px 10px rgba(70, 64, 55, 0.5));
@@ -104,8 +107,8 @@
 
   .card {
     @apply relative overflow-hidden;
-    @apply transform transition-transform duration-500 ease-in-out;
-    @apply md:hover:scale-110 md:hover:rotate-2;
+    @apply transform transition-all duration-500 ease-in-out;
+    @apply md:hover:scale-110 md:hover:rotate-2 md:hover:drop-shadow-lg;
 
     &:after {
       content: "";
@@ -135,13 +138,15 @@
   }
 
   .footer-nav {
-    @apply flex py-4 space-x-8;
+    @apply flex 
+      py-2 md:py-4 space-x-4 md:space-x-8;
     @apply border-b-2 border-camel-yellow-dark-soft;
     @apply text-camel-yellow-light-soft;
   }
 
   .footer-info {
-    @apply flex py-4 justify-between;
+    @apply flex py-4 justify-between
+      space-x-4 md:space-x-8;
   }
 }
 
