@@ -93,6 +93,11 @@
         filter: drop-shadow(1px 5px 10px rgba(70, 64, 55, 0.5));
       }
     }
+
+    .description {
+      @apply mb-2 overflow-hidden
+      line-clamp-2 md:line-clamp-4 xl:line-clamp-6;
+    }
   }
 
   .card {

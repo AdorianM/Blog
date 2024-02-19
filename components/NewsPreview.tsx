@@ -41,7 +41,7 @@ const NewsPreview = ({metadata, mirror} : { metadata: NewsMetadata, mirror: bool
                             </span>
                         ))}
                     </div>
-                    <p className="mb-2 overflow-hidden max-h-24">{description}</p>
+                    <p className="description">{description}</p>
                 </div>
 
                 <div className="flex justify-between">
