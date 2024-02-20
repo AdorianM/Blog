@@ -5,7 +5,7 @@ import Link from "next/link";
 
 //metadata and direction
 const NewsPreview = ({metadata, mirror} : { metadata: NewsMetadata, mirror: boolean}) => {
-    const { title, date, description, tags, slug } = metadata;
+    const { title = "Default Future Camel title", date, description, image = "/images/default.jpg", tags, slug } = metadata;
 
     const variationClasses = clsx({
         'md:flex-row-reverse': mirror,
@@ -25,8 +25,8 @@ const NewsPreview = ({metadata, mirror} : { metadata: NewsMetadata, mirror: bool
                 <Link href={`/news/${slug}`}>
                     <Image
                         className={imageVariationClasses}
-                        src="https://picsum.photos/600/400"
-                        alt={"image alt"}
+                        src={image || "/images/default.jpg"}
+                        alt={title}
                         objectFit="cover"
                         height={150}
                         width={300}

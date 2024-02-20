@@ -24,5 +24,6 @@ export interface ContentMetadata  extends BaseMetadata {
 
 export interface NewsMetadata extends BaseMetadata {
     description?: string;
+    image?: string;
     tags?: string[];
 }
