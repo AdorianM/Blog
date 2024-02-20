@@ -17,7 +17,7 @@ const Page = async ({ params } : any) => {
   return (
     <section>
       <Container>
-        <div className='prose lg:prose-xl mx-auto'>
+        <div className='prose lg:prose-xl mx-auto mt-8'>
           {content}
         </div>
       </Container>

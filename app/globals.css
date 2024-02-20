@@ -49,6 +49,12 @@
     @apply p-2 md:p-4
   }
 
+  .prose {
+    h1, h2, h3, h4, h5, h6 {
+      @apply text-camel-yellow-light;
+    }
+  }
+
   .hero {
     @apply flex items-center justify-center;
     @apply h-96 bg-cover;
