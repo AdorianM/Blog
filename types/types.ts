@@ -1,7 +1,10 @@
+import { StaticImageData } from "next/image";
+
 export interface HeroBannerType {
+    image?: string | StaticImageData;
     title?: string;
     buttonText?: string;
-    image?: string;
+    buttonUrl?: string;
 }
 
 export interface BaseMetadata {

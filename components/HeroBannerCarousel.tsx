@@ -31,7 +31,12 @@ const HeroBannerCarousel = ({heroData} : { heroData: HeroBannerType[] }) => {
 
     return (
         <div className="relative h-96">
-            <HeroBanner image={heroData[currentSlide].image} title={heroData[currentSlide].title} buttonText={heroData[currentSlide].buttonText} />
+            <HeroBanner 
+                image={heroData[currentSlide].image} 
+                title={heroData[currentSlide].title} 
+                buttonText={heroData[currentSlide].buttonText} 
+                buttonUrl={heroData[currentSlide].buttonUrl}
+            />
             <div className="absolute bottom-0 left-0 right-0 flex justify-center space-x-4 pb-4">
                 {heroData.map((_bannerData, index) => (
                     <div key={index} 

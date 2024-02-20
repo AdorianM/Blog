@@ -4,28 +4,37 @@ import GamesList from "@/components/GamesList";
 import Container from "@/components/Container";
 import News from "@/components/News";
 
+import BannerImage1 from "public/images/hero/hero-vampire-solitaire.png";
+import BannerImage2 from "public/images/hero/hero-vampire-solitaire.png";
+import BannerImage3 from "public/images/hero/hero-vampire-solitaire.png";
+import BannerImage4 from "public/images/hero/hero-vampire-solitaire.png";
+
 const HomePage = () => {
 
   const heroBannerData: HeroBannerType[] = [
     {
-      image: "https://picsum.photos/id/1/2000/600",
-      title: "Banner numbero 1",
-      buttonText: "Click to earn money"
+      image: BannerImage1,
+      title: "Vampire Solitaire",
+      buttonText: "See more",
+      buttonUrl: "https://olddews.itch.io/vampire-solitaire"
     },
     {
-      image: "https://picsum.photos/id/2/2000/600",
-      title: "Banner dos",
-      buttonText: "Click to be happy"
+      image: BannerImage2,
+      title: "Vampire Solitaire",
+      buttonText: "See more",
+      buttonUrl: "https://olddews.itch.io/vampire-solitaire"
     },
     {
-      image: "https://picsum.photos/id/3/2000/600",
-      title: "Banner Tres",
-      buttonText: "Click if you like carrots"
+      image: BannerImage3,
+      title: "Vampire Solitaire",
+      buttonText: "See more",
+      buttonUrl: "https://olddews.itch.io/vampire-solitaire"
     },
     {
-      image: "https://picsum.photos/id/4/2000/600",
-      title: "Banner Quatro",
-      buttonText: "Stagioni"
+      image: BannerImage4,
+      title: "Vampire Solitaire",
+      buttonText: "See more",
+      buttonUrl: "https://olddews.itch.io/vampire-solitaire"
     }
   ]
   return (
