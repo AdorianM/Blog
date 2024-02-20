@@ -1,21 +1,27 @@
 import fs from 'fs'
 import path from 'path'
 import { compileMDX } from 'next-mdx-remote/rsc'
+import remarkFrontmatter from 'remark-frontmatter'
 
 const rootDirectory = path.join(process.cwd(), 'content', 'news')
 
-export const getPostBySlug = (slug: string) => {
+export const getPostBySlug = async (slug: string) => {
     const realSlug = slug.replace(/\.mdx$/, '')
     const filePath = path.join(rootDirectory, `${realSlug}.mdx`)
 
     const fileContent = fs.readFileSync(filePath, { encoding: 'utf8' })
-    return fileContent
-    // const { frontmatter, content } = await compileMDX({
-    //     source: fileContent,
-    //     options: { parseFrontmatter: true }
-    // })
+    const { frontmatter, content } = await compileMDX({
+        source: fileContent,
+        options: { 
+            parseFrontmatter: true,
+            mdxOptions: {
+                remarkPlugins: [remarkFrontmatter],
+                rehypePlugins: []
+            }
+        },
+    })
 
-    // return { meta: { ...frontmatter, slug: realSlug }, content }
+    return { meta: { ...frontmatter, slug: realSlug }, content }
 }
 
 // export const getAllPostsMeta = async () => {
