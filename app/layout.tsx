@@ -38,7 +38,7 @@ export default function RootLayout({
 
   return (
     <html lang="en" className={`${lilitaOne.variable}`}>
-      <body className={`bg-neutral-100 ${inter.className}`}>
+      <body className={`dark ${inter.className}`}>
         <div>
           <Header />
           {children}

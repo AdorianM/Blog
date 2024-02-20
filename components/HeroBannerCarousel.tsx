@@ -40,7 +40,7 @@ const HeroBannerCarousel = ({heroData} : { heroData: HeroBannerType[] }) => {
             <div className="absolute bottom-0 left-0 right-0 flex justify-center space-x-4 pb-4">
                 {heroData.map((_bannerData, index) => (
                     <div key={index} 
-                        className={`carousel-dot ${index === currentSlide ? "bg-camel-yellow-light" : ""}`}
+                        className={`carousel-dot ${index === currentSlide ? "bg-camel-accent-600" : ""}`}
                         onClick={() => changeSlide(index)}
                     />
                 ))}

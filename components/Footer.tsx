@@ -22,7 +22,7 @@ const Footer = () => {
                 </div>
                 <div className="footer-info">
                     <p className="unimportant">© 2024 Future Camel</p>
-                    <div className="flex space-x-2 text-camel-yellow-light-soft">
+                    <div className="flex space-x-2">
                         <Link href="">
                             Privacy Policy
                         </Link>

@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 const Header = () => {
     return (
-    <header className="bg-camel-yellow-dark-strong">
+    <header className="">
         <div className="header">
             <Link href="/">
                 <Image

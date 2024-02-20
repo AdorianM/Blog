@@ -7,11 +7,11 @@ const ContentLinkList = (
     ) => {
     return (
         <ul>
-            <li className="text-xl md:text-2xl pb-2">
+            <li className="text-xl md:text-2xl pb-2 text-camel-secondary-600">
                 {header}
             </li>
             {content.map((item) => (
-                <li key={item.slug} className="text-camel-yellow-dark-soft">
+                <li key={item.slug}>
                     <Link href={`/${item.slug}`}>{item.title}</Link>
                 </li>
             ))}
