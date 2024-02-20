@@ -13,6 +13,11 @@ export interface BaseMetadata {
     slug: string;
 }
 
+export interface GameMetadata extends BaseMetadata {
+    description?: string;
+    image?: string;
+}
+
 export interface ContentMetadata  extends BaseMetadata {
     subtitle?: string;
 }

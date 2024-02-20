@@ -3,9 +3,7 @@ import Link from "next/link";
 const HeroBanner = (props: any) => {
 
     const { image, title, buttonText, buttonUrl } = props;
-
-    console.log(props)
-
+    
     return (
         <div 
             className="hero"
