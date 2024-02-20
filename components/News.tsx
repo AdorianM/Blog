@@ -1,5 +1,5 @@
 import { NewsMetadata } from "@/types/types";
-import getMetadata from "./getMetadata";
+import getMetadata from "@/lib/mdx";
 import NewsPreview from "./NewsPreview";
 
 const News = () => {

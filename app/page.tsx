@@ -3,7 +3,6 @@ import { HeroBannerType } from "@/types/types";
 import GamesList from "@/components/GamesList";
 import Container from "@/components/Container";
 import News from "@/components/News";
-import Ghtest from "../content/news/gh-test.mdx";
 
 const HomePage = () => {
 
@@ -33,7 +32,6 @@ const HomePage = () => {
     <div>
       <HeroBannerCarousel heroData={heroBannerData} />
       <Container>
-        <Ghtest />
         <GamesList />
         <News />
       </Container>

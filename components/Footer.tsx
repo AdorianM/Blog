@@ -1,6 +1,6 @@
 import { ContentMetadata, NewsMetadata } from "@/types/types"
 import ContentLinkList from "@/components/ContentLinkList"
-import getMetadata from "./getMetadata"
+import getMetadata from "@/lib/mdx"
 import Link from "next/link"
 
 const Footer = () => {

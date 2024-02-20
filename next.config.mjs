@@ -1,9 +1,6 @@
 /** @type {import('next').NextConfig} */
 import remarkFrontmatter from "remark-frontmatter";
-import remarkGfm from "remark-gfm";
 import createMDX from "@next/mdx";
-import remarkMath from "remark-math";
-import rehypeKatex from "rehype-katex";
 import remarkParse from "remark-parse";
 
 const nextConfig = {
@@ -28,8 +25,8 @@ const nextConfig = {
 const withMDX = createMDX({
     extension: /\.mdx?$/,
     options: {
-        remarkPlugins: [remarkFrontmatter, remarkGfm, remarkMath, remarkParse],
-        rehypePlugins: [rehypeKatex]
+        remarkPlugins: [remarkFrontmatter],
+        rehypePlugins: []
     },
 
 });

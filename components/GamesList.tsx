@@ -1,6 +1,6 @@
 import { ContentMetadata } from "@/types/types";
 import GamePreview from "./GamePreview";
-import getMetadata from "./getMetadata";
+import getMetadata from "@/lib/mdx";
 
 const GamesList = () => {
     const gamesMetadata = getMetadata<ContentMetadata>("content/games/")

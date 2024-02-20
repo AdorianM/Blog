@@ -1,3 +1,4 @@
+import Container from "@/components/Container";
 import { getPostBySlug } from "@/lib/mdx";
 
 // const getPageContent = async (slug: string) => {
@@ -11,13 +12,15 @@ import { getPostBySlug } from "@/lib/mdx";
 // }
 
 const Page = async ({ params } : any) => {
-  const { content } = await getPostBySlug(params.slug)
+  const { content } = await getPostBySlug("content/news", params.slug)
 
   return (
     <section>
-      <div className='container prose'>
-        {content}
-      </div>
+      <Container>
+        <div className='prose lg:prose-xl mx-auto'>
+          {content}
+        </div>
+      </Container>
     </section>
   )
 }
