@@ -301,8 +301,13 @@
 }
 
 body {
+  @apply h-screen flex flex-col;
   @apply bg-camel-background-100;
   @apply text-camel-text-700;
+}
+
+body > section {
+  @apply flex-grow;
 }
 
 /* width */

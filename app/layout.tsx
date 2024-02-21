@@ -39,11 +39,9 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${lilitaOne.variable}`}>
       <body className={`dark ${inter.className}`}>
-        <div>
-          <Header />
-          {children}
-          <Footer />
-        </div>
+        <Header />
+        {children}
+        <Footer />
       </body>
     </html>
   );
