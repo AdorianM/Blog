@@ -153,7 +153,9 @@
   }
 
   header {
-    @apply gradient;
+    @apply absolute top-0 left-0 w-full z-10;
+    @apply bg-gradient-to-b from-camel-background-50 to-transparent;
+    height: 150px;
   }
 
   footer {
@@ -194,7 +196,7 @@
 
   .hero {
     @apply flex items-center justify-center;
-    @apply h-96 bg-cover;
+    @apply h-full bg-cover;
     @apply transition-all duration-500 ease-in-out;
     @apply text-camel-accent-600;
     h1 {
@@ -212,6 +214,10 @@
     @apply font-bold;
   }
 
+  .carousel-parent {
+    @apply relative;
+    height: 580px;
+  }
   .carousel-dot {
     @apply w-2 h-2 md:w-4 md:h-4
           rounded-full bg-camel-background-300;

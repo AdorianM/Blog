@@ -30,7 +30,7 @@ const HeroBannerCarousel = ({heroData} : { heroData: HeroBannerType[] }) => {
     })
 
     return (
-        <div className="relative h-96">
+        <div className="carousel-parent">
             <HeroBanner 
                 image={heroData[currentSlide].image} 
                 title={heroData[currentSlide].title} 
