@@ -5,6 +5,9 @@ import { Lilita_One } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import React from "react";
+import ThemeToggleButton from "@/components/ThemeToggleButton";
+import { DarkModeWrapper } from "@/components/DarkModeWrapper";
 
 const inter = Inter({ subsets: ["latin"] });
 const lilitaOne = Lilita_One({
@@ -38,7 +41,7 @@ export default function RootLayout({
 
   return (
     <html lang="en" className={`${lilitaOne.variable}`}>
-      <body className={`dark ${inter.className}`}>
+      <body className={`${inter.className}`}>
         <Header />
         {children}
         <Footer />
