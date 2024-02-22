@@ -1,19 +1,11 @@
 "use client"
 import Image from 'next/image';
 import Link from 'next/link';
-import ThemeToggleButton from './ThemeToggleButton';
 
 const Header = () => {
-  const handleToggle = (isDarkMode: any) => {
-    if (isDarkMode) {
-      document.body.classList.add('dark');
-    } else {
-      document.body.classList.remove('dark');
-    }
-  };
 
   return (
-    <header className="">
+    <header>
       <div className="header">
         <Link href="/">
           <Image
@@ -34,7 +26,6 @@ const Header = () => {
             <li>
               <Link href="/about">About Us</Link>
             </li>
-            <ThemeToggleButton onToggle={handleToggle} />
           </ul>
         </div>
       </div>

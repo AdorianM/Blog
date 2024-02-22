@@ -5,76 +5,6 @@
 @layer base {
 
   :root {
-    --text-50: #f4f3f1;
-    --text-100: #e9e8e2;
-    --text-200: #d3d0c5;
-    --text-300: #bcb9a9;
-    --text-400: #a6a28c;
-    --text-500: #908b6f;
-    --text-600: #736f59;
-    --text-700: #565343;
-    --text-800: #3a372c;
-    --text-900: #1d1c16;
-    --text-950: #0e0e0b;
-    
-    --background-50: #f4f3f1;
-    --background-100: #e8e7e3;
-    --background-200: #d2cfc6;
-    --background-300: #bbb8aa;
-    --background-400: #a4a08e;
-    --background-500: #8e8871;
-    --background-600: #716d5b;
-    --background-700: #555244;
-    --background-800: #39362d;
-    --background-900: #1c1b17;
-    --background-950: #0e0e0b;
-    
-    --primary-50: #fbe9ee;
-    --primary-100: #f8d3de;
-    --primary-200: #f0a8bc;
-    --primary-300: #e97c9b;
-    --primary-400: #e1517a;
-    --primary-500: #da2558;
-    --primary-600: #ae1e47;
-    --primary-700: #831635;
-    --primary-800: #570f23;
-    --primary-900: #2c0712;
-    --primary-950: #160409;
-    
-    --secondary-50: #fbf4ea;
-    --secondary-100: #f6e9d5;
-    --secondary-200: #eed4aa;
-    --secondary-300: #e5be80;
-    --secondary-400: #dca956;
-    --secondary-500: #d4932b;
-    --secondary-600: #a97623;
-    --secondary-700: #7f581a;
-    --secondary-800: #553b11;
-    --secondary-900: #2a1d09;
-    --secondary-950: #150f04;
-    
-    --accent-50: #fdf5e8;
-    --accent-100: #fbecd0;
-    --accent-200: #f6d9a2;
-    --accent-300: #f2c673;
-    --accent-400: #eeb244;
-    --accent-500: #e99f16;
-    --accent-600: #bb7f11;
-    --accent-700: #8c600d;
-    --accent-800: #5d4009;
-    --accent-900: #2f2004;
-    --accent-950: #171002;
-  }
-
-  .dark {
-    .gradient {
-      @apply bg-gradient-to-tr from-camel-background-100 to-camel-background-200;
-    }
-
-    .gradient-footer {
-      @apply bg-gradient-to-bl from-camel-background-100 to-camel-background-200;
-    }
-
     --text-50: #0e0e0b;
     --text-100: #1d1c16;
     --text-200: #3a372c;
@@ -86,9 +16,9 @@
     --text-800: #d3d0c5;
     --text-900: #e9e8e2;
     --text-950: #f4f3f1;
-    
+
     --background-50: #0e0e0b;
-    --background-100: #1c1b17;
+    --background-100: #1f1e1d;
     --background-200: #39362d;
     --background-300: #555244;
     --background-400: #716d5b;
@@ -98,7 +28,7 @@
     --background-800: #d2cfc6;
     --background-900: #e8e7e3;
     --background-950: #f4f3f1;
-    
+
     --primary-50: #160409;
     --primary-100: #2c0712;
     --primary-200: #570f23;
@@ -110,7 +40,7 @@
     --primary-800: #f0a8bc;
     --primary-900: #f8d3de;
     --primary-950: #fbe9ee;
-    
+
     --secondary-50: #150f04;
     --secondary-100: #2a1d09;
     --secondary-200: #553b11;
@@ -122,7 +52,7 @@
     --secondary-800: #eed4aa;
     --secondary-900: #f6e9d5;
     --secondary-950: #fbf4ea;
-    
+
     --accent-50: #171002;
     --accent-100: #2f2004;
     --accent-200: #5d4009;
@@ -134,6 +64,22 @@
     --accent-800: #f6d9a2;
     --accent-900: #fbecd0;
     --accent-950: #fdf5e8; 
+  }
+
+  .gradient {
+    @apply bg-gradient-to-tr from-camel-background-100 to-camel-background-200;
+  }
+
+  .gradient-footer {
+    @apply bg-gradient-to-bl from-camel-background-100 to-camel-background-200;
+  }
+
+  h1 {
+    @apply text-camel-accent-600;
+  }
+
+  h2, h3, h4, h5, h6 {
+    @apply text-camel-text-700;
   }
 
   h1 {
@@ -155,7 +101,7 @@
   header {
     @apply absolute top-0 left-0 w-full z-10;
     @apply bg-gradient-to-b from-camel-background-50 to-transparent;
-    height: 150px;
+    @apply h-24 md:h-32;
   }
 
   footer {
@@ -189,9 +135,44 @@
   }
 
   .prose {
-    h1, h2, h3, h4, h5, h6 {
-      @apply text-camel-yellow-light;
+    @apply pt-24 md:pt-32;
+
+    h1 {
+      @apply text-camel-accent-600;
     }
+
+    h2, h3, h4, h5, h6 {
+      @apply text-camel-text-700;
+    }
+
+    a {
+      @apply text-camel-primary-600;
+    }
+
+    p {
+      @apply text-camel-text-700;
+    }
+    
+    strong {
+      @apply text-camel-secondary-600;
+    }
+
+    blockquote {
+      @apply border-l-4 border-camel-accent-600;
+    }
+
+    code {
+      @apply bg-camel-background-50;
+    }
+
+    pre {
+      @apply bg-camel-background-50;
+    }
+
+    hr {
+      @apply border-camel-accent-600;
+    }
+
   }
 
   .hero {
