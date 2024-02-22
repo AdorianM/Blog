@@ -18,7 +18,7 @@
     --text-950: #f4f3f1;
 
     --background-50: #0e0e0b;
-    --background-100: #1f1e1d;
+    --background-100: #1f1e1e;
     --background-200: #39362d;
     --background-300: #555244;
     --background-400: #716d5b;
@@ -83,7 +83,7 @@
   }
 
   h1 {
-    @apply text-4xl md:text-6xl;
+    @apply text-4xl md:text-8xl;
     @apply font-lilita;
   }
   h2 {
@@ -152,7 +152,7 @@
     p {
       @apply text-camel-text-700;
     }
-    
+
     strong {
       @apply text-camel-secondary-600;
     }
@@ -197,7 +197,7 @@
 
   .carousel-parent {
     @apply relative;
-    height: 70vh;
+    @apply h-64 md:h-128;
   }
   .carousel-dot {
     @apply w-2 h-2 md:w-4 md:h-4
@@ -264,7 +264,7 @@
   }
 
   .unimportant {
-    @apply text-sm text-camel-primary-400;
+    @apply text-sm text-camel-text-400;
   }
 
   .footer-nav {
@@ -272,12 +272,20 @@
       py-2 md:py-4 space-x-4 md:space-x-8;
     @apply border-b-2 border-camel-text-400;
     @apply text-camel-text-400;
+
+    a {
+      @apply hover:underline;
+    }
   }
 
   .footer-info {
     @apply flex py-4 justify-between
       space-x-4 md:space-x-8
       text-camel-primary-400;
+    
+    a {
+      @apply hover:underline;
+    }
   }
 }
 
@@ -298,15 +306,15 @@ body > section {
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #f5f5f5;
+  background: #1f1e1e;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #332c1f;
+  background: #0e0e0b;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #706a5f;
+  background: #eeb244;
 }

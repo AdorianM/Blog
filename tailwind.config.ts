@@ -14,6 +14,9 @@ const config: Config = {
       xl: '1440px',
     },
     extend: {
+      spacing: {
+        '128': '38rem',
+      },
       fontFamily: {
         lilita: ['var(--font-lilita-one)'],
       },
