@@ -1,6 +1,6 @@
 import { ContentMetadata, NewsMetadata } from "@/types/types"
 import ContentLinkList from "@/components/ContentLinkList"
-import getMetadata from "./getMetadata"
+import getMetadata from "@/lib/mdx"
 import Link from "next/link"
 
 const Footer = () => {
@@ -22,7 +22,7 @@ const Footer = () => {
                 </div>
                 <div className="footer-info">
                     <p className="unimportant">© 2024 Future Camel</p>
-                    <div className="flex space-x-2 text-camel-yellow-light-soft">
+                    <div className="flex space-x-2">
                         <Link href="">
                             Privacy Policy
                         </Link>

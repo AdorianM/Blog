@@ -5,6 +5,8 @@ import { Lilita_One } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import React from "react";
+import { GoogleTagManager } from '@next/third-parties/google';
 
 const inter = Inter({ subsets: ["latin"] });
 const lilitaOne = Lilita_One({
@@ -38,13 +40,12 @@ export default function RootLayout({
 
   return (
     <html lang="en" className={`${lilitaOne.variable}`}>
-      <body className={`bg-neutral-100 ${inter.className}`}>
-        <div>
-          <Header />
-          {children}
-          <Footer />
-        </div>
+      <body className={`${inter.className}`}>
+        <Header />
+        {children}
+        <Footer />
       </body>
+      <GoogleTagManager gtmId="G-B09K5PFDXD" />
     </html>
   );
 }
