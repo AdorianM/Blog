@@ -197,7 +197,8 @@
 
   .carousel-parent {
     @apply relative;
-    @apply h-64 md:h-128;
+    /* @apply h-64 lg:h-80 xxl:h-128; */
+    @apply h-[50vh];
   }
   .carousel-dot {
     @apply w-2 h-2 md:w-4 md:h-4
