@@ -4,6 +4,12 @@ import { compileMDX } from 'next-mdx-remote/rsc'
 import remarkFrontmatter from 'remark-frontmatter'
 import matter from 'gray-matter'
 
+import CircleImageInline from '@/components/mdx-usable/CircleImageInline'
+
+const components = {
+  CircleImageInline
+}
+
 export const getPostBySlug = async (location: string, slug: string) => {
     const realSlug = slug.replace(/\.mdx$/, '')
     const rootDirectory = path.join(process.cwd(), location)
@@ -19,6 +25,7 @@ export const getPostBySlug = async (location: string, slug: string) => {
                 rehypePlugins: []
             }
         },
+        components: components
     })
 
     return { meta: { ...frontmatter, slug: realSlug }, content }

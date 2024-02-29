@@ -134,6 +134,18 @@
     @apply p-2 md:p-4
   }
 
+  .clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  .inline-image {
+    @apply float-left mr-4;
+    @apply rounded-full;
+    @apply h-12 w-12 lg:h-24 lg:w-24 xl:h-28 xl:w-28;
+  }
+
   .prose {
     @apply pt-24 md:pt-32;
 
@@ -171,6 +183,10 @@
 
     hr {
       @apply border-camel-accent-600;
+    }
+
+    .inline-image {
+      @apply my-0 md:my-0 lg:my-0 xl:my-0;
     }
 
   }
